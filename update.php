@@ -2,12 +2,12 @@
 require_once "db_connect.php";
 
 $id = $_GET["id"];
-$sql = "SELECT * FROM user WHERE id = $id";
+$sql = "SELECT * FROM user WHERE book library = $book_library";
 $result = mysqli_query($conn, $sql);
 $row = mysqli_fetch_assoc($result);
 
     if (isset($_POST["submit"])) {
-    $sql = "INSERT INTO `user`(`author_first_name`, `author_last_name`, `image`, `isbn`, `publisher_Adress`, `publisher_name`, `publish_date`, `short_description`,`status`, `title`, `type`,) VALUES (
+    $sql = "INSERT INTO `user`(`author_first_name`, `author_last_name`, `image`, `isbn`, `publisher_Adress`, `publisher_name`, `publish_date`, `short_description`,`status`, `title`, `type`,) VALUES
         $author_first_name = $_POST["author_first_name"];
         $author_last_name = $_POST["author_last_name"];
         $image = $_POST["image"];
