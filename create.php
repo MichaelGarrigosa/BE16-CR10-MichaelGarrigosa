@@ -6,7 +6,7 @@ if (isset($_POST["submit"])) {
     $last_name = $_POST["last_name"];
     $email = $_POST["email"];
 
-    $sql = "INSERT INTO `user`( `first_name`, `last_name`, `email`) VALUES ('$first_name','$last_name','$email')";
+    $sql = "INSERT INTO `user`( `author_first_name`, `author_last_name`, `image`, `isbn`, `publisher_Adress`, `publisher_name`, `publish_date`, `short_description`,`status`, `title`, `type`,) VALUES ('$author_first_name`, `$author_last_name`, `$image`, `$isbn`, `$publisher_Adress`, `$publisher_name`, `$publish_date`, `$short_description`,`$status`, `$title`, `$type`)";
     $result = mysqli_query($conn, $sql);
 
     if ($result) {
