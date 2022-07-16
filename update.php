@@ -6,7 +6,7 @@ $sql = "SELECT * FROM user WHERE id = $id";
 $result = mysqli_query($conn, $sql);
 $row = mysqli_fetch_assoc($result);
 
-if (isset($_POST["submit"])) {
+    if (isset($_POST["submit"])) {
     $sql = "INSERT INTO `user`(`author_first_name`, `author_last_name`, `image`, `isbn`, `publisher_Adress`, `publisher_name`, `publish_date`, `short_description`,`status`, `title`, `type`,) VALUES (
         $author_first_name = $_POST["author_first_name"];
         $author_last_name = $_POST["author_last_name"];
@@ -21,7 +21,7 @@ if (isset($_POST["submit"])) {
         $type = $_POST["type"];
    
     $sql = "UPDATE `user` SET `author_first_name`, `author_last_name`, `image`, `isbn`, `publisher_Adress`, `publisher_name`, `publish_date`, `short_description`,`status`, `title`, `type`, WHERE id = $id";
-}
+    }
     $result = mysqli_query($conn, $sql);
     if ($result) {
         echo "User has been updated";
