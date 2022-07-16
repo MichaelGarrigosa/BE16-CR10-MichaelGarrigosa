@@ -1,13 +1,14 @@
 <?php
 require_once "db_connect.php";
 
-$id = $_GET["id"];
-$sql = "SELECT * FROM user WHERE book library = $book_library";
+$book_library = $_GET["book_library"];
+$sql = "SELECT * FROM book_library WHERE book library = $book_library";
 $result = mysqli_query($conn, $sql);
 $row = mysqli_fetch_assoc($result);
 
     if (isset($_POST["submit"])) {
-    $sql = "INSERT INTO `user`(`author_first_name`, `author_last_name`, `image`, `isbn`, `publisher_Adress`, `publisher_name`, `publish_date`, `short_description`,`status`, `title`, `type`,) VALUES
+    $sql = "INSERT INTO `book_libary`(`author_first_name`, `author_last_name`, `id`, `image`, `isbn`, `publisher_Adress`, `publisher_name`, `publish_date`, `short_description`,`status`, `title`, `type`,)
+    VALUES
         $author_first_name = $_POST["author_first_name"];
         $author_last_name = $_POST["author_last_name"];
         $image = $_POST["image"];
@@ -20,7 +21,7 @@ $row = mysqli_fetch_assoc($result);
         $title = $_POST["title"];
         $type = $_POST["type"];
    
-    $sql = "UPDATE `user` SET `author_first_name`, `author_last_name`, `image`, `isbn`, `publisher_Adress`, `publisher_name`, `publish_date`, `short_description`,`status`, `title`, `type`, WHERE id = $id";
+    $sql = "UPDATE `book_library`, SET `author_first_name`, `author_last_name`, `image`, `isbn`, `publisher_Adress`, `publisher_name`, `publish_date`, `short_description`,`status`, `title`, `type`, WHERE id = $id";
     }
     $result = mysqli_query($conn, $sql);
     if ($result) {
@@ -44,6 +45,7 @@ $row = mysqli_fetch_assoc($result);
     <form method="POST">
         <input type="text" name="author_first_name" value="<?php echo $row["author_first_name"] ?>">
         <input type="text" name="author_last_name" value="<?php echo $row["author_last_name"] ?>">
+        <input type="text" name="id" value="<?php echo $row["id"] ?>">
         <input type="image" name="image" value="<?php echo $row["image"] ?>">
         <input type="number" name="isbn" value="<?php echo $row["isbn"] ?>">
         <input type="text" name="publisher_adress" value="<?php echo $row["publisher_adress"] ?>">
@@ -52,6 +54,7 @@ $row = mysqli_fetch_assoc($result);
         <input type="text" name="title" value="<?php echo $row["title"] ?>">
         <input type="text" name="type" value="<?php echo $row["type"] ?>">
         <input type="submit" name="submit" value="Update">
+
     </form>
 </body>
 
