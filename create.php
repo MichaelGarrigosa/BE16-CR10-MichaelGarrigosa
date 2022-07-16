@@ -2,9 +2,21 @@
 require_once "db_connect.php";
 
 if (isset($_POST["submit"])) {
-    $first_name = $_POST["first_name"];
-    $last_name = $_POST["last_name"];
-    $email = $_POST["email"];
+    //$first_name = $_POST["first_name"];
+    //$last_name = $_POST["last_name"];
+    //$email = $_POST["email"];
+
+    $author_first_name = $_POST["author_first_name"];
+    $author_last_name = $_POST["author_last_name"];
+    $image = $_POST["image"];
+    $isbn = $_POST["isbn"];
+    $publisher_Adress = $_POST["publisher_adress"];
+    $publisher_name = $_POST["publisher_name"];
+    $publish_date = $_POST["publish_date"];
+    $short_description = $_POST["short_description"];
+    $status = $_POST["status"];
+    $title = $_POST["title"];
+    $type = $_POST["type"];
 
     $sql = "INSERT INTO `user`( `author_first_name`, `author_last_name`, `image`, `isbn`, `publisher_Adress`, `publisher_name`, `publish_date`, `short_description`,`status`, `title`, `type`,) VALUES ('$author_first_name`, `$author_last_name`, `$image`, `$isbn`, `$publisher_Adress`, `$publisher_name`, `$publish_date`, `$short_description`,`$status`, `$title`, `$type`)";
     $result = mysqli_query($conn, $sql);
