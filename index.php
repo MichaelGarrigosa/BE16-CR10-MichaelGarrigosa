@@ -12,13 +12,15 @@ if (mysqli_num_rows($result) == 0) {
     while ($row = mysqli_fetch_assoc($result)) {
         $body .= "<div class='card' style='width: 18rem;'>
   <div class='card-body'>
-  <h5 class='card-title'>{$row["first_name"]} {$row["last_name"]} {$row["id"]}</h5>
-  
+  <h5 class='card-title'>{$row["id"]} {$row["image"]} {$row["isbn"]} {$row["publisher_adress"]} {$row["publisher_first_name"]} {$row["publisher_last_name"]} 
+  {$row["publish_date"]}{$row["short_discription"]}{$row["status"]}{$row["title"]}{$row["type"]}
+
   <p class='card-text'>{$row["id"]}=</p>;
   <p class='card-text'>{$row["image"]}</p>;
   <p class='card-text'>{$row["isbn"]}</p>;
   <p class='card-text'>{$row["publisher_adress"]}</p>;
-  <p class='card-text'>{$row["publisher_name"]}</p>;
+  <p class='card-text'>{$row["publisher_first_name"]}</p>;
+  <p class='card-text'>{$row["publisher_last_name"]}</p>;
   <p class='card-text'>{$row["publish_date"]}</p>;
   <p class='card-text'>{$row["short_discription"]}}</p>;
   <p class='card-text'>{$row["status"]}</p>;
@@ -26,9 +28,9 @@ if (mysqli_num_rows($result) == 0) {
   <p class='card-text'>{$row["type"]}</p>;
 
    
-    <a href='details.php?id={$row["id"]}' class='btn btn-primary'>Details</a>
-    <a href='update.php?id={$row["id"]}' class='btn btn-warning'>Update</a>
-    <a href='delete.php?id={$row["id"]}' class='btn btn-danger'>Delete</a>
+    <a href='details.php?id={$row["book_library"]}' class='btn btn-primary'>Details</a>
+    <a href='update.php?id={$row["book_library"]}' class='btn btn-warning'>Update</a>
+    <a href='delete.php?id={$row["book_library"]}' class='btn btn-danger'>Delete</a>
   </div>
 </div>";
     }
