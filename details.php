@@ -26,8 +26,9 @@ $row = mysqli_fetch_assoc($result);
     <div class='card' style='width: 18rem;'>
         <div class='card-body'>
             <h5 class='card-title'><?= "{$row["author_first_name"]} {$row["author_last_name"]}"  ?> </h5>
-            <p class='card-text'><?= $row["book_library"] . " | " . $row["image"] . " | " .$row["isbn"] . " | " . $row["publisher_adress"] . " | " .$row["author_first_name"] . " | " . $row["publish_date"]
-            $row["short_discrition"] . " | " .$row["status"] . " | " . $row["title"] . " | " .$row["type"]?></p>
+            <p class='card-text'>
+                <?= $row["book_library"] . " | " . $row["image"] . " | " . $row["isbn"] . " | " . $row["publisher_adress"] . " | " . $row["author_first_name"] . " | " . $row["publish_date"] . " | " . $row["short_discrition"] . " | " . $row["status"] . " | " . $row["title"] . " | " . $row["type"] ?>
+            </p>
             <a href='update.php?id=<?= $row["book_library"] ?>' class='btn btn-warning'>Update</a>
             <a href='delete.php?id=<?= $row["book_library"] ?>' class='btn btn-danger'>Delete</a>
 
