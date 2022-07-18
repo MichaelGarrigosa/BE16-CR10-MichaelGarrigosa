@@ -5,7 +5,7 @@ require_once "db_connect.php";
 $sql = "SELECT * FROM book_library";
 $result = mysqli_query($conn, $sql);
 $body = "";
-//$rows = mysqli_fetch_all($result, MYSQLI_ASSOC);// mysqli_fetch_assoc()
+//$rows = mysqli_fetch_all($result, MYSQLI_ASSOC);mysqli_fetch_assoc()
 if (mysqli_num_rows($result) == 0) {
     $body = "No results";
 } else {

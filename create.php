@@ -23,7 +23,7 @@ if (isset($_POST["submit"])) {
     $result = mysqli_query($conn, $sql);
 
     if ($result) {
-        echo "book_ibary has been created";
+        echo "book_library has been created";
     } else {
         echo "Error";
     }
