@@ -12,7 +12,8 @@ if (mysqli_num_rows($result) == 0) {
     while ($row = mysqli_fetch_assoc($result)) {
         $body .= "<div class='card' style='width: 18rem;'>
   <div class='card-body'>
-  <h5 class='card-title'>{$row["id"]} {$row["title"]} {$row["image"]} {$row["isbn"]} {$row["short_discription"]} {$row["type"]} {$row["author_first_name"]} {$row["author_last_name"]}{$row["publisher_name"]} {$row["publisher_adress"]} {$row["publish_date"]}{$row["status"]} 
+  <h5 class='card-title'> {$row["title"]} {$row["author_first_name"]} {$row["author_last_name"]} {$row["id"]} </h5>
+  {$row["image"]} {$row["isbn"]} {$row["short_discription"]} {$row["type"]}  {$row{$row["publisher_name"]} {$row["publisher_adress"]} {$row["publish_date"]}{$row["status"]} 
   
   <p class='card-text'>{$row["id"]}</p>;
   <p class='card-text'>{$row["title"]}</p>;
@@ -29,7 +30,7 @@ if (mysqli_num_rows($result) == 0) {
   
  <a href='details.php?id={$row["book_library"]}' class='btn btn-primary'>Details</a>
     <a href='update.php?id={$row["book_library"]}' class='btn btn-warning'>Update</a>
-    <a href='delete.php?id={$row["book_library"]}' class='btn btn-danger'>Delete</a>
+    <a href='delete.php?id={$row["id"]}' class='btn btn-danger'>Delete</a>
   </div>
 </div>";
     }
