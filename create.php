@@ -19,7 +19,7 @@ if (isset($_POST["submit"])) {
     $publish_date = $_POST["publish_date"];
     $status = $_POST["status"];
 
-    $sql = "INSERT INTO `book_library`(`id`,`title`,`image`,`isbn`, `short_description`, `type`,`author_first_name`, `author_last_name`, `publisher_name`, `publisher_Adress`, `publish_date`, `status`,) VALUES (`$id`, `$image`, `$isbn`, `$short_description`, `$type`,`$author_first_name`, `$author_last_name`, `$publisher_name`,`$publisher_Adress`, `$publish_date`, `$status`)";
+    $sql = "INSERT INTO `book_library`(`id`,`title`,`image`,`isbn`, `short_description`, `type`,`author_first_name`, `author_last_name`, `publisher_name`, `publisher_adress`, `publish_date`, `status`,) VALUES (`$id`, `$image`, `$isbn`, `$short_description`, `$type`,`$author_first_name`, `$author_last_name`, `$publisher_name`,`$publisher_Adress`, `$publish_date`, `$status`)";
     $result = mysqli_query($conn, $sql);
 
     if ($result) {
@@ -43,15 +43,17 @@ if (isset($_POST["submit"])) {
 <body>
     <form method="POST">
 
-        <input type="text" name="author_first_name">
-        <input type="text" name="author_last_name">
         <input type="text" name="id">
+        <input type="text" name="title">
         <input type="image" name="image">
         <input type="number" name="isbn">
-        <input type="text" name="publisher_adress">
+        <input type="number" name="short_discription">
+        <input type="text" name="author_first_name">
+        <input type="text" name="author_last_name">
         <input type="text" name="publisher_name">
+        <input type="text" name="publisher_adress">
+        <input type="number" name="publisher_date">
         <input type="text" name="status">
-        <input type="text" name="title">
         <input type="text" name="type">
         <input type="submit" name="submit" value="Update">
 
