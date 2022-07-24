@@ -6,20 +6,20 @@ if (isset($_POST["submit"])) {
     //$last_name = $_POST["last_name"];
     //$email = $_POST["email"];
 
-    $author_first_name = $_POST["author_first_name"];
-    $author_last_name = $_POST["author_last_name"];
     $id = $_POST["id"];
+    $title = $_POST["title"];
     $image = $_POST["image"];
     $isbn = $_POST["isbn"];
-    $publisher_Adress = $_POST["publisher_adress"];
-    $publisher_name = $_POST["publisher_name"];
-    $publish_date = $_POST["publish_date"];
     $short_description = $_POST["short_description"];
-    $status = $_POST["status"];
-    $title = $_POST["title"];
     $type = $_POST["type"];
+    $author_first_name = $_POST["author_first_name"];
+    $author_last_name = $_POST["author_last_name"];
+    $publisher_name = $_POST["publisher_name"];
+    $publisher_Adress = $_POST["publisher_adress"];
+    $publish_date = $_POST["publish_date"];
+    $status = $_POST["status"];
 
-    $sql = "INSERT INTO `book_library`( `author_first_name`, `author_last_name`, `id`,`image`, `isbn`, `publisher_Adress`, `publisher_name`, `publish_date`, `short_description`,`status`, `title`, `type`,) VALUES ('$author_first_name`, `$author_last_name`, `$image`, `$isbn`, `$publisher_Adress`, `$publisher_name`, `$publish_date`, `$short_description`,`$status`, `$title`, `$type`)";
+    $sql = "INSERT INTO `book_library`(`id`,`title`,`image`,`isbn`, `short_description`, `type`,`author_first_name`, `author_last_name`, `publisher_name`, `publisher_Adress`, `publish_date`, `status`,) VALUES (`$id`, `$image`, `$isbn`, `$short_description`, `$type`,`$author_first_name`, `$author_last_name`, `$publisher_name`,`$publisher_Adress`, `$publish_date`, `$status`)";
     $result = mysqli_query($conn, $sql);
 
     if ($result) {
