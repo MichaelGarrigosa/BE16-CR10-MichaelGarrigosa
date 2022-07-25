@@ -12,7 +12,7 @@ if (mysqli_num_rows($result) == 0) {
     while ($row = mysqli_fetch_assoc($result)) {
         $body .= "<div class='card' style='width: 18rem;'>
   <div class='card-body'>
-  <h5 class='card-title'> {$row["title"]} {$row["author_first_name"]} {$row["author_last_name"]} {$row["id"]} </h5>
+  <h5 class='card-title'> {$row["id"]} {$row["title"]} {$row["author_first_name"]} {$row["author_last_name"]}</h5>
   {$row["image"]} {$row["isbn"]} {$row["short_description"]} {$row["type"]}  {$row["publisher_name"]} {$row["publisher_address"]} {$row["publish_date"]}{$row["status"]} 
   
   <p class='card-text'>{$row["id"]}</p>;
