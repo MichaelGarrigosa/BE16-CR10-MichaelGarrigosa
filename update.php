@@ -2,7 +2,7 @@
 require_once "db_connect.php";
 
 $book_library = $_GET["book_library"];
-$sql = "SELECT * FROM `book_library` WHERE `book_library` = $book_library";
+$sql = "SELECT * FROM book_library WHERE book_library = $book_library";
 $result = mysqli_query($conn, $sql);
 $row = mysqli_fetch_assoc($result);
 
