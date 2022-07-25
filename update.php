@@ -17,13 +17,13 @@ if (isset($_POST["submit"])) {
     $author_first_name = $_POST["author_first_name"];
     $author_last_name = $_POST["author_last_name"];
     $publisher_name = $_POST["publisher_name"];
-    $publisher_Adress = $_POST["publisher_adress"];
+    $publisher_address = $_POST["publisher_address"];
     $publish_date = $_POST["publish_date"];
     $status = $_POST["status"];
 
-
-
-    $sql = "UPDATE `book_library`, SET `title`='[$title]',`image`='[$image]',`isbn`='[$isbn]',`short_description`='[$short_description]',`type`='[$type]',`author_first_name`='[$author_first_name]',`author_last_name`='[$author_last_name]',`publisher_name`= '[$publisher_name]',`publisher_address`='[$publisher_adress]',`publish_date`='[publish_date]',`status`='[$status]' WHERE 1, WHERE id = $book_library";
+   WHERE 1, $sql = "UPDATE `book_library`, SET `title`='[$title]',`image`='[$image]',`isbn`='[$isbn]',`short_description`='[$short_description]',`type`='[$type]',`author_first_name`='[$author_first_name]',`author_last_name`='[$author_last_name]',`publisher_name`= '[$publisher_name]',`publisher_address`='[$publisher_address]',`publish_date`='[publish_date]',`status`='[$status]' 
+    
+    WHERE 1, WHERE id = $book_library";
     $result = mysqli_query($conn, $sql);
     if ($result) {
         echo "book_library has been updated";
@@ -60,9 +60,6 @@ if (isset($_POST["submit"])) {
         <input type="text" name="publish_date" value="<?php echo $row["publish_date"] ?>">
         <input type="text" name="status" value="<?php echo $row["status"] ?>">
         <input type="submit" name="submit" value="Update">
-
-
-
 
     </form>
 </body>
