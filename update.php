@@ -46,16 +46,19 @@ if (isset($_POST["submit"])) {
 
 <body>
     <form method="POST">
-        <input type="text" name="author_first_name" value="<?php echo $row["author_first_name"] ?>">
-        <input type="text" name="author_last_name" value="<?php echo $row["author_last_name"] ?>">
+
         <input type="text" name="id" value="<?php echo $row["id"] ?>">
+        <input type="text" name="title" value="<?php echo $row["title"] ?>">
         <input type="image" name="image" value="<?php echo $row["image"] ?>">
         <input type="number" name="isbn" value="<?php echo $row["isbn"] ?>">
-        <input type="text" name="publisher_adress" value="<?php echo $row["publisher_adress"] ?>">
-        <input type="text" name="publisher_name" value="<?php echo $row["publishe_date"] ?>">
-        <input type="text" name="status" value="<?php echo $row["status"] ?>">
-        <input type="text" name="title" value="<?php echo $row["title"] ?>">
+        <input type="text" name="short_description" value="<?php echo $row["short_description"] ?>">
         <input type="text" name="type" value="<?php echo $row["type"] ?>">
+        <input type="text" name="author_first_name" value="<?php echo $row["author_first_name"] ?>">
+        <input type="text" name="author_last_name" value="<?php echo $row["author_last_name"] ?>">
+        <input type="text" name="publisher_name" value="<?php echo $row["publisher_name"] ?>">
+        <input type="text" name="publisher_adress" value="<?php echo $row["publisher_adress"] ?>">
+        <input type="text" name="publish_date" value="<?php echo $row["publishe_date"] ?>">
+        <input type="text" name="status" value="<?php echo $row["status"] ?>">
         <input type="submit" name="submit" value="Update">
 
     </form>
