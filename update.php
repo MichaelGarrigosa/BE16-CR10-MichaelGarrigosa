@@ -21,7 +21,7 @@ if (isset($_POST["submit"])) {
     $publish_date = $_POST["publish_date"];
     $status = $_POST["status"];
 
-   WHERE 1, $sql = "UPDATE `book_library`, SET `title`='[$title]',`image`='[$image]',`isbn`='[$isbn]',`short_description`='[$short_description]',`type`='[$type]',`author_first_name`='[$author_first_name]',`author_last_name`='[$author_last_name]',`publisher_name`= '[$publisher_name]',`publisher_address`='[$publisher_address]',`publish_date`='[publish_date]',`status`='[$status]' 
+    $sql = "UPDATE `book_library`, SET `title`='[$title]',`image`='[$image]',`isbn`='[$isbn]',`short_description`='[$short_description]',`type`='[$type]',`author_first_name`='[$author_first_name]',`author_last_name`='[$author_last_name]',`publisher_name`= '[$publisher_name]',`publisher_address`='[$publisher_address]',`publish_date`='[publish_date]',`status`='[$status]' 
     
     WHERE 1, WHERE id = $book_library";
     $result = mysqli_query($conn, $sql);
