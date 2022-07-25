@@ -51,7 +51,7 @@ if (isset($_POST["submit"])) {
         <input type="text" name="author_first_name">
         <input type="text" name="author_last_name">
         <input type="text" name="publisher_name">
-        <input type="text" name="publisher_adress">
+        <input type="text" name="publisher_address">
         <input type="number" name="publisher_date">
         <input type="text" name="status">
         <input type="text" name="type">
