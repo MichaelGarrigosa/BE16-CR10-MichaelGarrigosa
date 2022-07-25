@@ -47,7 +47,7 @@ if (isset($_POST["submit"])) {
 <body>
     <form method="POST">
 
-        <input type="text" name="id" value="<?php echo $row["id"] ?>">
+
         <input type="text" name="title" value="<?php echo $row["title"] ?>">
         <input type="image" name="image" value="<?php echo $row["image"] ?>">
         <input type="number" name="isbn" value="<?php echo $row["isbn"] ?>">
