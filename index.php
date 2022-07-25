@@ -13,23 +13,23 @@ if (mysqli_num_rows($result) == 0) {
         $body .= "<div class='card' style='width: 18rem;'>
   <div class='card-body'>
   <h5 class='card-title'> {$row["title"]} {$row["author_first_name"]} {$row["author_last_name"]} {$row["id"]} </h5>
-  {$row["image"]} {$row["isbn"]} {$row["short_discription"]} {$row["type"]}  {$row{$row["publisher_name"]} {$row["publisher_adress"]} {$row["publish_date"]}{$row["status"]} 
+  {$row["image"]} {$row["isbn"]} {$row["short_description"]} {$row["type"]}  {$row["publisher_name"]} {$row["publisher_address"]} {$row["publish_date"]}{$row["status"]} 
   
   <p class='card-text'>{$row["id"]}</p>;
   <p class='card-text'>{$row["title"]}</p>;
   <p class='card-text'>{$row["image"]}</p>;
   <p class='card-text'>{$row["isbn"]}</p>;
-  <p class='card-text'>{$row["short_discription"]}</p>;
+  <p class='card-text'>{$row["short_description"]}</p>;
   <p class='card-text'>{$row["type"]}</p>;
   <p class='card-text'>{$row["author_first_name"]}</p>;
   <p class='card-text'>{$row["author_last_name"]}</p>;
   <p class='card-text'>{$row["publisher_name"]}</p>;
-  <p class='card-text'>{$row["publisher_adress"]}</p>;
+  <p class='card-text'>{$row["publisher_address"]}</p>;
   <p class='card-text'>{$row["publish_date"]}</p>;
   <p class='card-text'>{$row["status"]}</p>;
   
- <a href='details.php?id={$row["book_library"]}' class='btn btn-primary'>Details</a>
-    <a href='update.php?id={$row["book_library"]}' class='btn btn-warning'>Update</a>
+ <a href='details.php?id={$row["id"]}' class='btn btn-primary'>Details</a>
+    <a href='update.php?id={$row["id"]}' class='btn btn-warning'>Update</a>
     <a href='delete.php?id={$row["id"]}' class='btn btn-danger'>Delete</a>
   </div>
 </div>";

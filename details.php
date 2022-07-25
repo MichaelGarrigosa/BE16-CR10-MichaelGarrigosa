@@ -1,8 +1,8 @@
 <?php
 require_once "db_connect.php";
 
-$id = $_GET["book_library"];
-$sql = "select * from book_library where book_library = $book_library";
+$id = $_GET["id"];
+$sql = "select * from id where id = $id";
 $result = mysqli_query($conn, $sql);
 
 $row = mysqli_fetch_assoc($result);
@@ -27,10 +27,10 @@ $row = mysqli_fetch_assoc($result);
         <div class='card-body'>
             <h5 class='card-title'><?= "{$row["author_first_name"]} {$row["author_last_name"]}"  ?> </h5>
             <p class='card-text'>
-                <?= $row["book_library"] . " | " . $row["image"] . " | " . $row["isbn"] . " | " . $row["publisher_adress"] . " | " . $row["author_first_name"] . " | " . $row["publish_date"] . " | " . $row["short_discrition"] . " | " . $row["status"] . " | " . $row["title"] . " | " . $row["type"] ?>
+                <?= $row["image"] . " | " . $row["isbn"] . " | " . $row["publisher_address"] . " | " . $row["author_first_name"] . " | " . $row["publish_date"] . " | " . $row["short_description"] . " | " . $row["status"] . " | " . $row["title"] . " | " . $row["type"] ?>
             </p>
-            <a href='update.php?id=<?= $row["book_library"] ?>' class='btn btn-warning'>Update</a>
-            <a href='delete.php?id=<?= $row["book_library"] ?>' class='btn btn-danger'>Delete</a>
+            <a href='update.php?id=<?= $row["id"] ?>' class='btn btn-warning'>Update</a>
+            <a href='delete.php?id=<?= $row["id"] ?>' class='btn btn-danger'>Delete</a>
 
 
         </div>
