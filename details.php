@@ -2,7 +2,7 @@
 require_once "db_connect.php";
 
 $id = $_GET["id"];
-$sql = "select * from id where id = $id";
+$sql = "select * from book_library where id = $id";
 $result = mysqli_query($conn, $sql);
 
 $row = mysqli_fetch_assoc($result);
@@ -25,7 +25,7 @@ $row = mysqli_fetch_assoc($result);
 <body>
     <div class='card' style='width: 18rem;'>
         <div class='card-body'>
-            <h5 class='card-title'><?= "{$row["author_first_name"]} {$row["author_last_name"]}"  ?> </h5>
+            <h5 class='card-title'><?= "{$row["author_first_name"]} {$row["author_last_name"]}" ?></h5>
             <p class='card-text'>
                 <?= $row["image"] . " | " . $row["isbn"] . " | " . $row["publisher_address"] . " | " . $row["author_first_name"] . " | " . $row["publish_date"] . " | " . $row["short_description"] . " | " . $row["status"] . " | " . $row["title"] . " | " . $row["type"] ?>
             </p>

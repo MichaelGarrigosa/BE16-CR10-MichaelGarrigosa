@@ -3,7 +3,7 @@ require_once "db_connect.php";
 $id = $_GET["id"];
 
 if (isset($_POST["submit"])) {
-    $sql = "DELETE FROM user WHERE id = $id";
+    $sql = "DELETE FROM book_library WHERE id = $id";
 
     $result = mysqli_query($conn, $sql);
 
