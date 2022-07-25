@@ -41,7 +41,7 @@ if (isset($_GET["status"])) {
                     <p class='card-text'>{$row["author_last_name"]}</p>
                     <p class='card-text'>{$row["isbn"]}</p>
                     <a href='details.php? book_library ={$row["image"]}' class='btn btn-primary'>Details</a>
-                    <a href='update.php? book_library ={$row["short_describtion"]}' class='btn btn-warning'>Update</a>
+                    <a href='update.php? book_library ={$row["short_description"]}' class='btn btn-warning'>Update</a>
                     <a href='delete.php? book_library ={$row["author_first_name"]}' class='btn btn-danger'>Delete</a>
                     <a href='delete.php? book_library ={$row["author_last_name"]}' class='btn btn-danger'>Delete</a>
                     <a href='delete.php? book_library ={$row["publish_date"]}' class='btn btn-danger'>Delete</a>
