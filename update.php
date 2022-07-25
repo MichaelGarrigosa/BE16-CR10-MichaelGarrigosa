@@ -1,35 +1,36 @@
 <?php
 require_once "db_connect.php";
 
-$book_library = $_GET["book_library"];
-$sql = "SELECT * FROM book_library WHERE book_library = $book_library";
+$book_library = $_GET["id"];
+$sql = "SELECT * FROM book_library WHERE id = $book_library";
 $result = mysqli_query($conn, $sql);
 $row = mysqli_fetch_assoc($result);
 
 //$sql = "INSERT INTO `book_libary`(`author_first_name`, `author_last_name`, `id`, `image`, `isbn`, `publisher_Adress`, `publisher_name`, `publish_date`, `short_description`,`status`, `title`, `type`,)
 if (isset($_POST["submit"])) {
 
-    $author_first_name = $_POST["author_first_name"];
-    $author_last_name = $_POST["author_last_name"];
-    $id = $_POST["id"];
+    $title = $_POST["title"];
     $image = $_POST["image"];
     $isbn = $_POST["isbn"];
-    $publisher_Adress = $_POST["publisher_adress"];
-    $publisher_name = $_POST["publisher_name"];
-    $publish_date = $_POST["publish_date"];
     $short_description = $_POST["short_description"];
-    $status = $_POST["status"];
-    $title = $_POST["title"];
     $type = $_POST["type"];
+    $author_first_name = $_POST["author_first_name"];
+    $author_last_name = $_POST["author_last_name"];
+    $publisher_name = $_POST["publisher_name"];
+    $publisher_Adress = $_POST["publisher_adress"];
+    $publish_date = $_POST["publish_date"];
+    $status = $_POST["status"];
 
-    $sql = "UPDATE `book_library`, SET `author_first_name`, `author_last_name`, `id`,`image`, `isbn`, `publisher_Adress`, `publisher_name`, `publish_date`, `short_description`,`status`, `title`, `type`, WHERE book_library = $book_library";
-}
-$result = mysqli_query($conn, $sql);
-if ($result) {
-    echo "book_library has been updated";
-    header("refresh:3;url= index.php");
-} else {
-    echo "Error";
+
+
+    $sql = "UPDATE `book_library`, SET `title`='[$title]',`image`='[$image]',`isbn`='[$isbn]',`short_description`='[$short_description]',`type`='[$type]',`author_first_name`='[$author_first_name]',`author_last_name`='[$author_last_name]',`publisher_name`= '[$publisher_name]',`publisher_address`='[$publisher_adress]',`publish_date`='[publish_date]',`status`='[$status]' WHERE 1, WHERE id = $book_library";
+    $result = mysqli_query($conn, $sql);
+    if ($result) {
+        echo "book_library has been updated";
+        header("refresh:3;url= index.php");
+    } else {
+        echo "Error";
+    }
 }
 
 ?>
