@@ -13,11 +13,15 @@ if (isset($_GET["status"])) {
         while ($row = mysqli_fetch_assoc($result)) {
             $body .= "<div class='card' style='width: 18rem;'>
                 <div class='card-body'>
-                    <h5 class='card-title'>{$row["author_first_name"]} {$row["book_library"]}</h5>
+                    <h5 class='card-title'> {$row["id"]} {$row["title"]} {$row["author_first_name"]} </h5>
                     <p class='card-text'>{$row["author_last_name"]}</p>
-                    <a href='details.php?book_library={$row["book_library"]}' class='btn btn-primary'>Details</a>
-                    <a href='update.php?book_library={$row["book_library"]}' class='btn btn-warning'>Update</a>
-                    <a href='delete.php?book_library={$row["book_library"]}' class='btn btn-danger'>Delete</a>
+                    <p class='card-text'>{$row["isbn"]}</p>
+                    <a href='details.php? book_library ={$row["image"]}' class='btn btn-primary'>Details</a>
+                    <a href='update.php? book_library ={$row["short_describtion"]}' class='btn btn-warning'>Update</a>
+                    <a href='delete.php? book_library ={$row["author_first_name"]}' class='btn btn-danger'>Delete</a>
+                    <a href='delete.php? book_library ={$row["author_last_name"]}' class='btn btn-danger'>Delete</a>
+                    <a href='delete.php? book_library ={$row["publish_date"]}' class='btn btn-danger'>Delete</a>
+                    <a href='delete.php? book_library ={$row["status"]}' class='btn btn-danger'>Delete</a>
                 </div>
             </div>";
         }
@@ -33,11 +37,15 @@ if (isset($_GET["status"])) {
         while ($row = mysqli_fetch_assoc($result)) {
             $body .= "<div class='card' style='width: 18rem;'>
             <div class='card-body'>
-            <h5 class='card-title'>{$row["author_first_name"]} {$row["book_library"]}</h5>
-            <p class='card-text'>{$row["author_last_name"]}</p>
-            <a href='details.php?book_library={$row["book_library"]}' class='btn btn-primary'>Details</a>
-            <a href='update.php?book_library={$row["book_library"]}' class='btn btn-warning'>Update</a>
-            <a href='delete.php?book_library={$row["book_library"]}' class='btn btn-danger'>Delete</a>
+            <h5 class='card-title'> {$row["id"]} {$row["title"]} {$row["author_first_name"]} </h5>
+                    <p class='card-text'>{$row["author_last_name"]}</p>
+                    <p class='card-text'>{$row["isbn"]}</p>
+                    <a href='details.php? book_library ={$row["image"]}' class='btn btn-primary'>Details</a>
+                    <a href='update.php? book_library ={$row["short_describtion"]}' class='btn btn-warning'>Update</a>
+                    <a href='delete.php? book_library ={$row["author_first_name"]}' class='btn btn-danger'>Delete</a>
+                    <a href='delete.php? book_library ={$row["author_last_name"]}' class='btn btn-danger'>Delete</a>
+                    <a href='delete.php? book_library ={$row["publish_date"]}' class='btn btn-danger'>Delete</a>
+                    <a href='delete.php? book_library ={$row["status"]}' class='btn btn-danger'>Delete</a>
                 </div>
             </div>";
         }
