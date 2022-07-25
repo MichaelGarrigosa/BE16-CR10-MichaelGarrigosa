@@ -15,11 +15,11 @@ if (isset($_POST["submit"])) {
     $author_first_name = $_POST["author_first_name"];
     $author_last_name = $_POST["author_last_name"];
     $publisher_name = $_POST["publisher_name"];
-    $publisher_Adress = $_POST["publisher_adress"];
+    $publisher_Adress = $_POST["publisher_address"];
     $publish_date = $_POST["publish_date"];
     $status = $_POST["status"];
 
-    $sql = "INSERT INTO `book_library`(`id`,`title`,`image`,`isbn`, `short_description`, `type`,`author_first_name`, `author_last_name`, `publisher_name`, `publisher_adress`, `publish_date`, `status`,) VALUES (`$id`, `$image`, `$isbn`, `$short_description`, `$type`,`$author_first_name`, `$author_last_name`, `$publisher_name`,`$publisher_Adress`, `$publish_date`, `$status`)";
+    $sql = "INSERT INTO `id`(`title`,`image`,`isbn`, `short_description`, `type`,`author_first_name`, `author_last_name`, `publisher_name`, `publisher_adress`, `publish_date`, `status`,) VALUES (`$title`, `$image`, `$isbn`, `$short_description`, `$type`,`$author_first_name`, `$author_last_name`, `$publisher_name`,`$publisher_address`, `$publish_date`, `$status`)";
     $result = mysqli_query($conn, $sql);
 
     if ($result) {
