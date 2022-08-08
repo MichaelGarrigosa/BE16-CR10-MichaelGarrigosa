@@ -27,18 +27,17 @@ if (mysqli_num_rows($result) == 0) {
   <p class='card-text'>{$row["publisher_address"]}</p>;
   <p class='card-text'>{$row["publish_date"]}</p>;
   <p class='card-text'>{$row["status"]}</p>;
+  <p class='card-text'>{$row["status"]}</p>;
+
+
   
  <a href='details.php?id={$row["id"]}' class='btn btn-primary'>Details</a>
     <a href='update.php?id={$row["id"]}' class='btn btn-warning'>Update</a>
     <a href='delete.php?id={$row["id"]}' class='btn btn-danger'>Delete</a>
-    <a href='create.php?id={$row["id"]}' class='btn btn-warning'>Create</a>
-    <a href='details.php?id={$row["id"]}' class='btn btn-danger'>Details</a>
-    <a href='filter.php?id={$row["id"]}' class='btn btn-warning'>Filter</a>
-   
+    <a href='payment.php?id={$row["id"]}' class='btn btn-danger'>Payment</a>
+    
   </div>
 </div>";
-        // <a href='payment.php?id={$row["id"]}' class='btn btn-danger'>Payment</a>
-
     }
 }
 
